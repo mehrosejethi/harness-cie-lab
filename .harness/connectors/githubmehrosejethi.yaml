@@ -1,0 +1,23 @@
+connector:
+  name: github-mehrosejethi
+  identifier: githubmehrosejethi
+  description:
+  orgIdentifier: Training
+  projectIdentifier: Training
+  type: Github
+  spec:
+    url: https://github.com/mehrosejethi
+    validationRepo: harness-cie-lab
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: mehrosejethi
+          tokenRef: Github_Connector_2
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: Github_Connector_2
+    executeOnDelegate: true
+    type: Account
